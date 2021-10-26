@@ -54,6 +54,7 @@ int main()
             {
                 cout<<"Error- "<<GetLastError()<<endl;
             }
+            cout<<response<<endl;
         }
         command.replace(0, command.size(), command.size(), '\0');
     }

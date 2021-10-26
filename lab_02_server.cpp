@@ -82,13 +82,14 @@ int main()
 
             command.resize(command.find('\0'));
 
-            std::istringstream parser {command};
+            istringstream parser {command};
             parser >> ws >> keyword;
 
             if (keyword == "set")
             {
                 parser >> key >> value;
                 data[key] = value;
+                cout << value;
                 response = "acknowledged";
             }
             else if (keyword == "get")
